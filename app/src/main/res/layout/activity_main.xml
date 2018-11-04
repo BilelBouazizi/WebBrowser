@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp" />
+
+
+
+    <ImageButton
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_alignTop="@+id/go"
+        android:layout_alignBottom="@+id/et"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_toStartOf="@+id/go"
+        android:layout_toLeftOf="@+id/go"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <Button
+        android:id="@+id/go"
+        android:layout_width="52dp"
+        android:layout_height="37dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:onClick="pop"
+        android:layout_marginTop="7dp"
+        android:text="@string/three_point" />
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="253dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/go"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_toStartOf="@+id/go"
+        android:layout_toLeftOf="@+id/go"
+        android:ems="10"
+        android:hint="@string/entrer_votre_url"
+        android:inputType="text"
+        />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/et">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="487dp"
+                android:layout_below="@+id/progress"
+                android:layout_alignLeft="@+id/progress"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp" />
+
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/i1"
+        android:title="Refraichir"
+        app:showAsAction="never">
+
+</item>
+        <!-- "item" submenu -->
+
+            <item android:id="@+id/a"
+                android:title="precedent"
+                app:showAsAction="never"
+                />
+            <item android:id="@+id/b"
+                android:title="suivant"
+                app:showAsAction="never"
+                 />
+    <item android:id="@+id/c"
+        android:title="Favoris"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/d"
+        android:title="Liste De Favoris"
+        app:showAsAction="never"
+        />
+
+
+</menu>
